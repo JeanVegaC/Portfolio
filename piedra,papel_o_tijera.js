@@ -83,6 +83,33 @@ const play = ()=>{
     showCard(0);
 }    
 
+/* Procedimiento para hallar el ganador */
+const winner = ()=>{
+    console.log('Ingresando al Winner');
+    const img = document.getElementsByTagName('img');
+    setTimeout(() => {
+        if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
+            if(player1 == 0){
+                showWinner(0);
+            }else if(player1 == 1){
+                showWinner(1);
+            }else showWinner(2);            
+        }else if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Papel.jpg.png'){
+            if(player1 == 0){
+                showWinner(2);
+            }else if(player1 == 1){
+                showWinner(0);
+            }else showWinner(1);
+        }else if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Tijera.jpg.png'){
+            if(player1 == 0){
+                showWinner(1);
+            }else if(player1 == 1){
+                showWinner(2);
+            }else showWinner(0);
+        }
+    }, 1000);
+}
+
 /* funcion para mostrar al ganador */
 const showWinner = (n)=>{
     let tmp = n;
@@ -108,35 +135,6 @@ const showWinner = (n)=>{
         overlay.classList.add('show-overlay');
     }, 1000);
 }
-
-/* Procedimiento para hallar el ganador */
-const winner = ()=>{
-    console.log('Ingresando al Winner');
-    const img = document.getElementsByTagName('img');
-    setTimeout(() => {
-        if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
-            if(player1 == 0){
-                showWinner(0);
-            }else if(player1 == 1){
-                showWinner(1);
-            }else showWinner(2);            
-        }else if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Papel.jpg.png'){
-            if(player1 == 0){
-                showWinner(2);
-            }else if(player1 == 1){
-                showWinner(0);
-            }else showWinner(1);
-        }else if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Tijera.jpg.png'){
-            if(player1 == 0){
-                showWinner(1);
-            }else if(player1 == 1){
-                showWinner(2);
-            }else showWinner(0);
-        }
-    }, 1000);
-}
-
-
 
 /* Funcion para revelar las cartas del rival */
 const revealCard = ()=>{
