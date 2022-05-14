@@ -85,6 +85,7 @@ const play = ()=>{
 
 /* Procedimiento para hallar el ganador */
 const winner = ()=>{
+    console.log('Ingresando al Winner');
     const img = document.getElementsByTagName('img');
     setTimeout(() => {
         if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
@@ -112,7 +113,7 @@ const winner = ()=>{
 /* funcion para mostrar al ganador */
 const showWinner = (n)=>{
     let tmp = n;
-
+    console.log('Ingresando al showWinner');
     const overlay = document.querySelector('.game-overlay'),
     winner = document.querySelector('.winner'),
     imgWinner = document.querySelector('.img-winner'),
@@ -132,7 +133,7 @@ const showWinner = (n)=>{
     setTimeout(() => {
         winner.classList.add('show-winner');
         overlay.classList.add('show-overlay');
-    }, 2000);
+    }, 1000);
 }
 
 /* Funcion para revelar las cartas del rival */
