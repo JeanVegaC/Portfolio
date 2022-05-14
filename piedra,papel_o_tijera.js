@@ -83,6 +83,32 @@ const play = ()=>{
     showCard(0);
 }    
 
+/* funcion para mostrar al ganador */
+const showWinner = (n)=>{
+    let tmp = n;
+    console.log('Ingresando al showWinner');
+    const overlay = document.querySelector('.game-overlay'),
+    winner = document.querySelector('.winner'),
+    imgWinner = document.querySelector('.img-winner'),
+    titleWinner = document.querySelector('.title-winner');
+
+    if(tmp == 0){
+        titleWinner.textContent = `Empate :/`;
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Draw.png';
+    }else if(tmp == 1){
+        titleWinner.textContent = `Ganaste :D`;
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Winner.jpg';
+    }else{
+        titleWinner.textContent = `Perdiste :(`;
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Loser.jpg';
+    }
+    
+    setTimeout(() => {
+        winner.classList.add('show-winner');
+        overlay.classList.add('show-overlay');
+    }, 1000);
+}
+
 /* Procedimiento para hallar el ganador */
 const winner = ()=>{
     console.log('Ingresando al Winner');
@@ -110,31 +136,7 @@ const winner = ()=>{
     }, 1000);
 }
 
-/* funcion para mostrar al ganador */
-const showWinner = (n)=>{
-    let tmp = n;
-    console.log('Ingresando al showWinner');
-    const overlay = document.querySelector('.game-overlay'),
-    winner = document.querySelector('.winner'),
-    imgWinner = document.querySelector('.img-winner'),
-    titleWinner = document.querySelector('.title-winner');
 
-    if(tmp == 0){
-        titleWinner.textContent = `Empate :/`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Draw.png';
-    }else if(tmp == 1){
-        titleWinner.textContent = `Ganaste :D`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Winner.jpg';
-    }else{
-        titleWinner.textContent = `Perdiste :(`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Loser.jpg';
-    }
-    
-    setTimeout(() => {
-        winner.classList.add('show-winner');
-        overlay.classList.add('show-overlay');
-    }, 1000);
-}
 
 /* Funcion para revelar las cartas del rival */
 const revealCard = ()=>{
