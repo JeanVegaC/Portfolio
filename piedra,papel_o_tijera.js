@@ -87,27 +87,36 @@ const play = ()=>{
 const winner = ()=>{
     console.log('Ingresando al Winner');
     const img = document.getElementsByTagName('img');
+    console.log('player 2 ' +player2);
+    console.log(img);
     setTimeout(() => {
         if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
+            console.log('entre');
             if(player1 == 0){
                 showWinner(0);
             }else if(player1 == 1){
                 showWinner(1);
             }else showWinner(2);            
         }else if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Papel.jpg.png'){
+            console.log('entre');
             if(player1 == 0){
                 showWinner(2);
             }else if(player1 == 1){
                 showWinner(0);
             }else showWinner(1);
         }else if(img[player2+4].src == 'assets_piedra,papel_o_tijera/img/Tijera.jpg.png'){
+            console.log('entre');
             if(player1 == 0){
                 showWinner(1);
             }else if(player1 == 1){
                 showWinner(2);
             }else showWinner(0);
         }
+
+        console.log(img[player2+4].src);
     }, 1000);
+
+    
 }
 
 /* funcion para mostrar al ganador */
@@ -154,9 +163,9 @@ const revealCard = ()=>{
     }, Math.random()*200);
     
     setTimeout(() => {
-    img[listNum[0]].src = 'assets_piedra,papel_o_tijera/img/Piedra.jpg.png';
-    img[listNum[1]].src = 'assets_piedra,papel_o_tijera/img/Papel.jpg.png';
-    img[listNum[2]].src = 'assets_piedra,papel_o_tijera/img/Tijera.jpg.png';
+    img[listNum[0]].src = '/assets_piedra,papel_o_tijera/img/Piedra.jpg.png';
+    img[listNum[1]].src = '/assets_piedra,papel_o_tijera/img/Papel.jpg.png';
+    img[listNum[2]].src = '/assets_piedra,papel_o_tijera/img/Tijera.jpg.png';
     }, 1000);
     
     winner();
