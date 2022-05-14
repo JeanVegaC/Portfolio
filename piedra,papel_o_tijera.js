@@ -120,13 +120,13 @@ const showWinner = (n)=>{
 
     if(tmp == 0){
         titleWinner.textContent = `Empate :/`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Draw';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Draw.png';
     }else if(tmp == 1){
         titleWinner.textContent = `Ganaste :D`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Winner';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Winner.jpg';
     }else{
         titleWinner.textContent = `Perdiste :(`;
-        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Loser';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Loser.jpg';
     }
     
     setTimeout(() => {
