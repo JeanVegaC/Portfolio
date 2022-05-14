@@ -90,21 +90,22 @@ const winner = ()=>{
     console.log('player 2 ' +player2);
     console.log(img);
     setTimeout(() => {
-        if(img[player2+4].src == 'https://portfolio-jeanvegac.vercel.app/assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
+        console.log(img[player2+4].src);
+        if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Piedra.jpg.png'){
             console.log('entre');
             if(player1 == 0){
                 showWinner(0);
             }else if(player1 == 1){
                 showWinner(1);
             }else showWinner(2);            
-        }else if(img[player2+4].src == 'https://portfolio-jeanvegac.vercel.app/assets_piedra,papel_o_tijera/img/Papel.jpg.png'){
+        }else if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Papel.jpg.png'){
             console.log('entre');
             if(player1 == 0){
                 showWinner(2);
             }else if(player1 == 1){
                 showWinner(0);
             }else showWinner(1);
-        }else if(img[player2+4].src == 'https://portfolio-jeanvegac.vercel.app/assets_piedra,papel_o_tijera/img/Tijera.jpg.png'){
+        }else if(img[player2+4].src == 'http://127.0.0.1:5500/assets_piedra,papel_o_tijera/img/Tijera.jpg.png'){
             console.log('entre');
             if(player1 == 0){
                 showWinner(1);
@@ -113,7 +114,7 @@ const winner = ()=>{
             }else showWinner(0);
         }
 
-        console.log(img[player2+4].src);
+        
     }, 1000);
 
     
