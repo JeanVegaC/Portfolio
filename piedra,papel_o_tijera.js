@@ -132,7 +132,7 @@ const showWinner = (n)=>{
     setTimeout(() => {
         winner.classList.add('show-winner');
         overlay.classList.add('show-overlay');
-    }, 1000);
+    }, 2000);
 }
 
 /* Funcion para revelar las cartas del rival */
