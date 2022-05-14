@@ -120,13 +120,13 @@ const showWinner = (n)=>{
 
     if(tmp == 0){
         titleWinner.textContent = `Empate :/`;
-        imgWinner.src = 'https://i.pinimg.com/originals/50/d3/fe/50d3fe7437683844ba91130b8200b02c.png';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Draw';
     }else if(tmp == 1){
         titleWinner.textContent = `Ganaste :D`;
-        imgWinner.src = 'https://i.pinimg.com/564x/db/2a/24/db2a242eb36a73aa0a1dc115320dda85.jpg';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Winner';
     }else{
         titleWinner.textContent = `Perdiste :(`;
-        imgWinner.src = 'https://i.pinimg.com/736x/70/33/65/703365ee5679cf81a63c9e59b4a50172.jpg';
+        imgWinner.src = 'assets_piedra,papel_o_tijera/img/Loser';
     }
     
     setTimeout(() => {
